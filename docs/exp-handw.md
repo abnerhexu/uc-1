@@ -50,6 +50,9 @@ MNIST是一个著名的手写体识别数据集，由美国国家标准与技术
 
 $$
 \mathrm{sigmoid}(x)=\frac{1}{1+\mathrm e^{-x}} \\ 
+$$
+
+$$
 \frac{\mathrm{d}(\mathrm{sigmoid})}{\mathrm{d}x}=\frac{\mathrm e^{-x}}{(1+\mathrm e^{-x})^2}=(1-\mathrm{sigmoid}(x))(\mathrm{sigmoid}(x))
 $$
 
