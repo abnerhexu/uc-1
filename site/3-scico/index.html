@@ -202,24 +202,39 @@
   
   
   
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        序言
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1">
-          关于本书
+        <label class="md-nav__link" for="__nav_2">
+          关于课程
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="关于本书" data-md-level="1">
-        <label class="md-nav__title" for="__nav_1">
+      <nav class="md-nav" aria-label="关于课程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          关于本书
+          关于课程
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -229,8 +244,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../forehead/" class="md-nav__link">
-        序言
+      <a href="../educoder/" class="md-nav__link">
+        配套实训
       </a>
     </li>
   
@@ -259,6 +274,20 @@
     <li class="md-nav__item">
       <a href="../about/" class="md-nav__link">
         关于试用版本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acquire/" class="md-nav__link">
+        获取Python解释器
       </a>
     </li>
   
@@ -928,13 +957,13 @@
 </code></pre></div>
 <h4 id="315">3.1.5线性方程组的求解</h4>
 <p>假设我们有一个线性方程组</p>
-<p>$$
+<div class="arithmatex">\[
 \begin{cases}a_{11}x_1+a_{12}x_2+a_{13}x_3+a_{14}x_4=b_1
- \a_{21}x_1+a_{22}x_2+a_{23}x_3+a_{24}x_4=b_2
- \a_{31}x_1+a_{32}x_2+a_{33}x_3+a_{34}x_4=b_3
- \a_{41}x_1+a_{42}x_2+a_{43}x_3+a_{44}x_4=b_4</p>
-<p>\end{cases}
-$$</p>
+ \\a_{21}x_1+a_{22}x_2+a_{23}x_3+a_{24}x_4=b_2
+ \\a_{31}x_1+a_{32}x_2+a_{33}x_3+a_{34}x_4=b_3
+ \\a_{41}x_1+a_{42}x_2+a_{43}x_3+a_{44}x_4=b_4
+\end{cases}
+\]</div>
 <p>那么，我们可以将<span class="arithmatex">\(x\)</span>前面的系数抽取出来，构成一个4×4的矩阵</p>
 <div class="arithmatex">\[
 A=\begin{bmatrix}

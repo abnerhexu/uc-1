@@ -19,10 +19,12 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
 nav:
-  - 关于本书:
-    - 序言: 'forehead.md'
+  - 序言: 'index.md'
+  - 关于课程:
+    - 配套实训: 'educoder.md'
     - 本书编写人员: 'team.md'
     - 关于试用版本: 'about.md'
+    - 获取Python解释器: 'acquire.md'
   - 语言基础: '1-basis.md'
   - 函数: '2-func.md'
   - 实验：用遗传算法求解旅行商问题: 'exp-ga.md'
