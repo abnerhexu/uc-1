@@ -1,4 +1,4 @@
-site_name: 大学计算 必修第一册
+site_name: 计算科学导论 必修第一册
 theme:
   name: material
   language: zh
@@ -32,6 +32,6 @@ nav:
   - 实验：Python运行优化: 'exp-opti.md'
   - 输入与文件读取: '4-file.md'
   - 面向对象编程: '5-obj.md'
-  - 实验：手写体识别: 'exp-handw.md'
-  - 并行编程入门: '6-para.md'
+  - 机器学习与人工智能概论: '6-ai.md'
+  - 并行编程入门: '7-para.md'
   - 实验：GPU编程: 'exp-gpu.md'

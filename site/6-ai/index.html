@@ -1,0 +1,806 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>机器学习与人工智能概论 - 计算科学导论 必修第一册</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="计算科学导论 必修第一册" class="md-header__button md-logo" aria-label="计算科学导论 必修第一册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            计算科学导论 必修第一册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              机器学习与人工智能概论
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/abnerhexu/uc-1" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    abnerhexu/uc-1
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="计算科学导论 必修第一册" class="md-nav__button md-logo" aria-label="计算科学导论 必修第一册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    计算科学导论 必修第一册
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/abnerhexu/uc-1" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    abnerhexu/uc-1
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        序言
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          关于课程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="关于课程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          关于课程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../educoder/" class="md-nav__link">
+        配套实训
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../team/" class="md-nav__link">
+        本书编写人员
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        关于试用版本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acquire/" class="md-nav__link">
+        获取Python解释器
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-basis/" class="md-nav__link">
+        语言基础
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-func/" class="md-nav__link">
+        函数
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exp-ga/" class="md-nav__link">
+        实验：用遗传算法求解旅行商问题
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-scico/" class="md-nav__link">
+        科学计算与曲线绘图
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exp-opti/" class="md-nav__link">
+        实验：Python运行优化
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-file/" class="md-nav__link">
+        输入与文件读取
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-obj/" class="md-nav__link">
+        面向对象编程
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          机器学习与人工智能概论
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        机器学习与人工智能概论
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1 最基本的神经元模型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    6.2 两种气候
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 两种气候">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    6.2.1 参数的自动调整
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    6.3 升高维度 线性变换 激活函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    6.4 梯度下降
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    6.5 展望
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-para/" class="md-nav__link">
+        并行编程入门
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exp-gpu/" class="md-nav__link">
+        实验：GPU编程
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1 最基本的神经元模型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    6.2 两种气候
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 两种气候">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    6.2.1 参数的自动调整
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    6.3 升高维度 线性变换 激活函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    6.4 梯度下降
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    6.5 展望
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/abnerhexu/uc-1/edit/master/docs/6-ai.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="_1">机器学习与人工智能概论</h1>
+<p>作为一门计算机科学的导论课，我们当然需要把计算机科学的各个分支都融合进这门课程中——显然，少不了当下十分热门，并深刻地改变了人类社会的一个分支——机器学习。现在，我们就将走进机器学习的大门。在此之前，我们有必要来速成一下有关神经网络和机器学习的内容。</p>
+<p>用Python在机器学习领域进行“炼丹”，是再火热不过的话题了。作为一门胶水语言，Python简直可以做太多太多事情；在机器学习领域，著名的库，例如Keras，Pytorch和Tensorflow，尽管它们的后端可能使用C++进行更高效的计算，但提供的API确实Python的，这样大大减少了跨学科领域研究的难度，研究人员只需要掌握Python就能根据自己的模型进行训练——而在之前的所有学习中，你应当感受到了Python是相对容易掌握的。</p>
+<h3 id="61">6.1 最基本的神经元模型</h3>
+<p>在IEEE（电气和电子工程师协会，读作eye-triple-ee）网站上我们能找到J. von Neumann于1945年发表的<em>First draft of a report on the EDVAC</em>一文，在这篇文章中，J. von Neumann引入了MacCulloch和W. Pitts的神经元模型；可见人类对于神经元模型的探索是伴随着计算机被创立就开始了。这也很好理解，因为起初人们就是希望模仿人脑进行计算机的制造，而人脑神经的工作方式，自然而然就成为了研究和模仿的重点。在计算机科学的发展中，这一模型还进一步发展成为感知机，而后就是我们熟悉的机器学习与人工智能了。</p>
+<p>下面我们展现了一个最基本的神经元模型。</p>
+<p><img alt="" src="../image/neutron_QDRVkUdbzy.svg" /></p>
+<p>这个神经元工作的方式是，接受数据的某些特征<span class="arithmatex">\(x_1,x_2,x_3\)</span>的输入，并将其分别乘以权重（weight），再减去偏置值<span class="arithmatex">\(b\)</span>，将得到的结果放入激活函数<span class="arithmatex">\(f(x)\)</span>，最后得到输出<span class="arithmatex">\(y\)</span>。激活函数是非常重要的一环，它能够将我们的输出统一起来，而不会出现某两个输出值相差特别巨大的情况。在《语言基础》一章中，我们就曾经构建过著名的激活函数ReLU。</p>
+<p>这个神经元工作的方式是，接受数据的某些特征<span class="arithmatex">\(x_1,x_2,x_3\)</span>的输入，并将其分别乘以权重（weight），再减去偏置值<span class="arithmatex">\(b\)</span>，将得到的结果放入激活函数<span class="arithmatex">\(f(x)\)</span>，最后得到输出<span class="arithmatex">\(y\)</span>。激活函数是非常重要的一环，它能够将我们的输出统一起来，而不会出现某两个输出值相差特别巨大的情况。在《语言基础》一章中，我们就曾经构建过著名的激活函数ReLU。</p>
+<p><img alt="" src="../image/3dpoints_IAIBmOs3rC.svg" /></p>
+<p>如图所示，在一个三维空间中我们有若干个点，有的是橘色，有的是蓝色。假设我们通过神经元对橘色的点和蓝色的点进行分类。这两种点都具有的特征是坐标<span class="arithmatex">\((x,y,z)\)</span>，我们将其作为<span class="arithmatex">\((x_1, x_2, x_3)\)</span>输入神经元。乘以权重，减去偏置；假设我们的激活函数就是ReLU函数，再将得到的值放入激活函数，即</p>
+<div class="arithmatex">\[
+y=\mathrm {relu}(w_1x_1+w_2x_2+w_3x_3 - b)
+\]</div>
+<p>假设我们认定<span class="arithmatex">\(y&gt;0\)</span>表示我们通过这个点的信息，预测这个点是蓝色；<span class="arithmatex">\(y&lt;0\)</span>是橘色。那么假如某个点本来是蓝色，但是带入这个点的坐标以后通过我们的计算<span class="arithmatex">\(y&lt;0\)</span>，那么说明我们的权重<span class="arithmatex">\((w_1, w_2, w_3)\)</span>和偏置<span class="arithmatex">\(b\)</span>的选取有问题，这时候我们就需要调整参数，直到我们能够区分出绝大多数点。</p>
+<p>这个时候，如果我们绘制出<span class="arithmatex">\(w_1x_1+w_2x_2+w_3x_3-b=0\)</span>，即<span class="arithmatex">\(w_1x+w_2y+w_3z-b=0\)</span>，我们事实上是得到了三维空间中的一个平面。这个平面将大多数蓝色和橙色的点分隔开。</p>
+<p>总而言之，在这个最基本的神经网络模型中，进行机器学习的步骤就是选取特征、计算值、调整参数、得出结果。</p>
+<h3 id="62">6.2 两种气候</h3>
+<p>亚热带季风和湿润气候和热带雨林气候是两种不同类型的气候。这两种气候在年平均温度和维度上都有所区别。在下面我们给出的这张图片中，我们展示了一些地区的年平均温度和纬度。其中，橙色点表示的是亚热带季风和湿润气候，蓝色的点表示热带雨林气候。由于某一年气候的变化，收集到的实际气候数据如下图所示。</p>
+<p><img alt="" src="../image/pic0_oBwihes3j4.svg" /></p>
+<p>其中横坐标表示年降水量，纵坐标表示年平均温度。我们现在希望的是要构造一个神经元模型，能够正确区分这两种气候类型。</p>
+<p>根据我们刚刚的经验，要把两个采集到的数据作为输入，那么我们就可以构造一个包含两个输入的神经元，如下图所示。</p>
+<p><img alt="" src="../image/pic1_rfxM51Rk-x.svg" /></p>
+<p>好了，现在我们可以随便初始化一个向量<span class="arithmatex">\((w_1, w_2)\)</span>，并将<span class="arithmatex">\(b\)</span>初始化为<span class="arithmatex">\(0\)</span>，我们可以用numpy的数组来实现这个功能，我们的线性回归方程就是<span class="arithmatex">\(w_1x_1+w_2x_2-b=0\)</span>（也就是说，我们可以用这条直线将坐标图分为两部分），可以画出图像来。</p>
+<p><img alt="" src="../image/pic2_N1QXPYnt9V.svg" /></p>
+<p>可以看到，这离我们的预期还是有很大差别的。现在就要实现最关键的一步：实现<span class="arithmatex">\((w_1, w_2)\)</span>的自动调整，达到我们希望的如下图所示的这种状况。</p>
+<p><img alt="" src="../image/pic3_klmxlmhWbo.svg" /></p>
+<p>这样，如果<span class="arithmatex">\(w_1x_1+w_2x_2-b&gt;0\)</span>，那么就一定是橙色部分的点，反之则是绿色部分的点。现在，我们对模型稍加改动，变成</p>
+<p><img alt="" src="../image/pic4_AsKJGNeInO.svg" /></p>
+<p><span class="arithmatex">\(\mathrm{sgn}(x)\)</span>恐怕是高中数学接触的最有名的分段函数之一了，其表达式为</p>
+<div class="arithmatex">\[
+\mathrm{sgn}(x)=\begin{cases} -1, x &lt; 0
+ \\0, x = 0
+ \\ 1, x &gt; 0
+\end{cases}
+\]</div>
+<p>这样，如果我们的输出为1，则说明是热带雨林气候，反之则为亚热带季风和湿润气候。</p>
+<h4 id="621">6.2.1 参数的自动调整</h4>
+<p>当我们带入某一个点的坐标我们就一定能算出某个值。现在我们希望的是刻画这个点计算出的值与正确的值之间的差距。例如，当我们带入某个点，通过这个模型得到的值是1，但根据其实际气候类型判断，我们期望的值为0，那么我们可以构造这样的函数</p>
+<div class="arithmatex">\[
+L = y_{\mathrm{expect}}-y_{\mathrm{predict}}
+\]</div>
+<p>来描述我们“离正确结果还差多远”。我们可以通过这个函数来对<span class="arithmatex">\(w_i\)</span>和<span class="arithmatex">\(b\)</span>进行调整，实际上就是使我们的<span class="arithmatex">\(w_i\)</span>加上一个小小的<span class="arithmatex">\(\Delta w_i\)</span>，使<span class="arithmatex">\(b\)</span>加上一个小小的<span class="arithmatex">\(\Delta b\)</span>；<span class="arithmatex">\(\Delta w_i\)</span>和<span class="arithmatex">\(\Delta b\)</span>的值，显然是与<span class="arithmatex">\(L\)</span>有关的，如果<span class="arithmatex">\(L\)</span>较大，那么调整量也应该更大；此外，增量<span class="arithmatex">\(w_i\)</span>也与<span class="arithmatex">\(x_i\)</span>有关，如果<span class="arithmatex">\(x_i\)</span>越大，说明在相同的<span class="arithmatex">\(w_i\)</span>下，偏向某一方的值也就越大，因此还应当考虑增量与<span class="arithmatex">\(x_i\)</span>之间的关系。你可以自行设计算法，然后进行迭代。最终我们就能得到正确的值。</p>
+<h3 id="63">6.3 升高维度 线性变换 激活函数</h3>
+<p>现在我们来说说升高维度。</p>
+<p><img alt="" src="../image/pic5_Nqsl2PDWHr.svg" /></p>
+<p>现在我们有若干的点，如图所示。显然，我们再也没有办法将这两种点通过一条直线分开了。不过，我们稍加一点改动，对于每一个点输入的向量<span class="arithmatex">\((x_1, x_2)\)</span>，我们都先乘上一个矩阵再加上一个向量，即</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+w_1  &amp; w_4\\
+w_2  &amp; w_5\\
+w_3  &amp; w_6
+\end{bmatrix}\begin{bmatrix} x_1
+ \\ x_2
+\end{bmatrix}
++\begin{bmatrix}b_1
+ \\b_2
+ \\b_3
+\end{bmatrix}=\begin{bmatrix}w_1x_1+w_4x_2+b_1
+ \\w_2x_1+w_5x_2+b_2
+ \\w_3x_1+w_6x_2+b_3
+\end{bmatrix}
+\]</div>
+<p>将最右边的向量记作<span class="arithmatex">\((z_1, z_2, z_3)\)</span>，现在我们的点已经被转化到了三维空间。我们随便构造一个<span class="arithmatex">\([w_i]\)</span>和<span class="arithmatex">\([b_i]\)</span>的矩阵，来看看它在升高维度以后是什么样的。令<span class="arithmatex">\(w_1=1,w_5=1\)</span>，其余参数都为零。那么图形就变成了</p>
+<p><img alt="" src="../image/pic6_3y54h-XsmZ.svg" /></p>
+<p>现在，就到了线性变换。笔者在大学一年级秋季学期上《线性代数》课时，教员一上来就讲矩阵、行列式，没有线性，更不必说代数；导致笔者学起来云里雾里。后来偶然看到<em>inear Algebra and Its Applications</em>一书，才明白原来线性代数中线性变换是多么的重要，然而在笔者大学一年级的《线性代数》课上，这些内容毫无涉及。如果你感兴趣，我们还是强烈推荐你参考一下刚刚提到的那本教材。</p>
+<p>通过线性变换，我们能够改变这些点的排布。如果我们能够找到矩阵<span class="arithmatex">\([w_i]\)</span>和<span class="arithmatex">\([b_i]\)</span>，使得蓝色的点通过计算后，<span class="arithmatex">\((z_1,z_2,z_3)\)</span>中的每一个元素都小于零，而橘色的点至少保证有一个大于零，现在我们就可以搬出某个函数，不妨把我们熟悉的符号函数改造成</p>
+<div class="arithmatex">\[
+f(x)=\begin{cases} 1, x &gt; 0\\
+0, x \le 0
+\end{cases} 
+\]</div>
+<p>这样，我们对<span class="arithmatex">\((z_1, z_2, z_3)\)</span>中的每一个元素都加上这样一个函数，那么蓝色点对应的区域就始终是<span class="arithmatex">\((0, 0, 0)\)</span>，而将这个点与其他点分开就是再容易不过的事情了。这就是激活函数。除了这个阶跃函数以外，还有<span class="arithmatex">\(\mathrm{sigmoid}\)</span>、<span class="arithmatex">\(\mathrm{tanh}\)</span>等激活函数。</p>
+<p>现在，我们可以以用平面来将这个点与其他点分开，也就达到了将蓝色点与橙色点分开的目的。因为我们必须使用一个面，所以我们的输出层将会包含两个神经元。</p>
+<h3 id="64">6.4 梯度下降</h3>
+<p>现在我们的网络结构可以用下面这张图来表示。</p>
+<p><img alt="" src="../image/pic7_2CyrDg6nSF.svg" /></p>
+<p>点与点之间还有<span class="arithmatex">\([w_i]\)</span>，我们也没有画出。现在我们知道，每次调整了[w_i]和[b_i]的值之后，机器分类的正确率都会有所变化。假设我们定义好某个损失函数（用于描述机器分类符合预期的函数，损失值越大，机器分类一般越不准确），那么我们可以认为损失函数就是关于<span class="arithmatex">\(w_i\)</span>和<span class="arithmatex">\(b_i\)</span>的一个多元函数，即</p>
+<div class="arithmatex">\[
+Loss = f(w_1, w_2, ...,w_n, b_1, b_2, ..., b_n)
+\]</div>
+<p>和“两种气候”的分类一样，我们通过求损失函数关于<span class="arithmatex">\(w_i\)</span>的偏导数<span class="arithmatex">\(\frac{\partial f}{\partial w_i}\)</span>和对<span class="arithmatex">\(b_i\)</span>的偏导数<span class="arithmatex">\(\frac{\partial f}{\partial b_i}\)</span>，加上我们的学习率，就能确定我们在每一个参数的调整上需要调整多少。这样的方法被我们称为<strong>反向传播</strong>。例如，在上面的模型中，如果<span class="arithmatex">\(f(x)\)</span>选用的是<span class="arithmatex">\(\mathrm{sigmoid}\)</span>函数，损失函数确定为<span class="arithmatex">\(Loss=\frac{1}{2N}(y_{\mathrm{expect}}-y_{\mathrm {predict}})^2\)</span>。现在，当我们随便设置好初始参数，输入第一个训练样本的<span class="arithmatex">\((x_1, x_2)\)</span>，此时<span class="arithmatex">\(N=1\)</span>。现在来求<span class="arithmatex">\(h_2\)</span>上方的<span class="arithmatex">\(b_{h2}\)</span>对于损失函数的的偏导数。</p>
+<p>根据链式法则，有</p>
+<div class="arithmatex">\[
+\frac{\partial Loss}{\partial b_{h2}}=\frac{\partial Loss}{\partial y_{\mathrm{predict}}}\frac{\partial y_{\mathrm{predict}}}{\partial f}\frac{\partial f}{\partial h_2}\frac{\partial h_2}{\partial b_{h2}}
+\]</div>
+<p>其中，<span class="arithmatex">\(\frac{\partial Loss}{\partial y_{\mathrm{predict}}}=-(y_{\mathrm{expect}}-y_{\mathrm {predict}})\)</span>，由于我们使用的是sigmoid函数，因此有</p>
+<div class="arithmatex">\[
+\mathrm{sigmoid}(x)=\frac{1}{1+\mathrm e^{-x}} \\ 
+\]</div>
+<div class="arithmatex">\[
+\frac{\mathrm{d}(\mathrm{sigmoid})}{\mathrm{d}x}=\frac{\mathrm e^{-x}}{(1+\mathrm e^{-x})^2}=(1-\mathrm{sigmoid}(x))(\mathrm{sigmoid}(x))
+\]</div>
+<p>假设<span class="arithmatex">\(h_2\)</span>对于<span class="arithmatex">\(f(x)\)</span>的权重<span class="arithmatex">\(w_{h2}\)</span>，<span class="arithmatex">\(h_1\)</span>对于<span class="arithmatex">\(f(x)\)</span>的权重<span class="arithmatex">\(w_{h1}\)</span>。全部的偏导数我们就都可以求得出来。</p>
+<p>从原理上来说，我们已经搭建好了一个神经网络模型。只需要让我们的模型一遍又一遍地梯度下降，我们就能解决一切分类问题。</p>
+<h3 id="65">6.5 展望</h3>
+<p>机器学习发展到今天，不论是CNN卷积神经网络，还是RNN循环神经网络，还有更多名称更复杂、功能更高级的网络，其最基本的都是从我们在这一章介绍的感知机-神经元模型出发的。一些Python的库为我们提供了直接调用这些方法的途径，例如，使用Pytorch，我们可以快速实现自动求导。在配套实训中，我们准备了一个由下图所示的神经网络构成的CNN卷积网络，可以实现MNIST手写字体库的识别。如果你感兴趣可以去看看。</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../5-obj/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 面向对象编程" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              面向对象编程
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../7-para/" class="md-footer__link md-footer__link--next" aria-label="下一页: 并行编程入门" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              并行编程入门
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      沙河小分队，蜀ICP备2021028983号-2
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

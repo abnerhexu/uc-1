@@ -13,7 +13,7 @@
     
     
       
-        <title>科学计算与曲线绘图 - 大学计算 必修第一册</title>
+        <title>科学计算与曲线绘图 - 计算科学导论 必修第一册</title>
       
     
     
@@ -74,7 +74,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="大学计算 必修第一册" class="md-header__button md-logo" aria-label="大学计算 必修第一册" data-md-component="logo">
+    <a href=".." title="计算科学导论 必修第一册" class="md-header__button md-logo" aria-label="计算科学导论 必修第一册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -87,7 +87,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            大学计算 必修第一册
+            计算科学导论 必修第一册
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -172,13 +172,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="大学计算 必修第一册" class="md-nav__button md-logo" aria-label="大学计算 必修第一册" data-md-component="logo">
+    <a href=".." title="计算科学导论 必修第一册" class="md-nav__button md-logo" aria-label="计算科学导论 必修第一册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    大学计算 必修第一册
+    计算科学导论 必修第一册
   </label>
   
     <div class="md-nav__source">
@@ -597,8 +597,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../exp-handw/" class="md-nav__link">
-        实验：手写体识别
+      <a href="../6-ai/" class="md-nav__link">
+        机器学习与人工智能概论
       </a>
     </li>
   
@@ -612,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6-para/" class="md-nav__link">
+      <a href="../7-para/" class="md-nav__link">
         并行编程入门
       </a>
     </li>
@@ -861,8 +861,8 @@
 <h4 id="312">3.1.2数组中的数据类型</h4>
 <p>除了Python原生支持的数据类型外，NumPy还对一些数据类型有特殊的支持。你可以通过</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">array_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i4&#39;</span><span class="p">)</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">array_ll</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i8&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">array_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i4&#39;</span><span class="p">)</span> <span class="c1"># 每个整数占四个字节，即32位</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">array_ll</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i8&#39;</span><span class="p">)</span> <span class="c1"># 每个整数占八个字节，即64位</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">array_int</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">array_ll</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </code></pre></div>
@@ -1067,10 +1067,10 @@ Y'= \neg X \wedge \neg Y
 <blockquote>
 <p>🍈给定一个列表，列表元素是一个元组，每个元组包含一个点的<span class="arithmatex">\((x, y)\)</span>坐标。使用最小二乘法计算这些点的回归方程，并画出该直线在<span class="arithmatex">\([-5, 5)\)</span>间的图像。给定的列表为lst = [(1.50, 1.82), (2.55, 3.29), (3.33, 1.84), (4.53, 4.22), (3.74, 2.95), (4.01, 5.32), (0, 0.9), (5.79, 5.38), (7.54, 6.60)]</p>
 </blockquote>
-<p>我们假设回归方程的表达式为$ y = \hat b x + \hat a  $，那么有</p>
+<p>我们假设回归方程的表达式为<span class="arithmatex">\(y = \hat b x + \hat a\)</span>，那么有</p>
 <div class="arithmatex">\[
 \hat b = \frac{\sum_{i=1}^{n} x_iy_i - n\overline{x}\ \overline{y}}{\sum_{i=1}^{n} x_i^2-n\overline{x}^2} \\ \
-\\ \hat a = \overline{y}-\hat b \overline{x} 
+\\ ,\hat a = \overline{y}-\hat b \overline{x} 
 \]</div>
 <p>我们首先来计算<span class="arithmatex">\(\overline{x}\)</span>和<span class="arithmatex">\(\overline{y}\)</span>。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">1.50</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">),</span> <span class="p">(</span><span class="mf">2.55</span><span class="p">,</span> <span class="mf">3.29</span><span class="p">),</span> <span class="p">(</span><span class="mf">3.33</span><span class="p">,</span> <span class="mf">1.84</span><span class="p">),</span> <span class="p">(</span><span class="mf">4.53</span><span class="p">,</span> <span class="mf">4.22</span><span class="p">),</span> <span class="p">(</span><span class="mf">3.74</span><span class="p">,</span> <span class="mf">2.95</span><span class="p">),</span> <span class="p">(</span><span class="mf">4.01</span><span class="p">,</span> <span class="mf">5.32</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.79</span><span class="p">,</span> <span class="mf">5.38</span><span class="p">),</span> <span class="p">(</span><span class="mf">7.54</span><span class="p">,</span> <span class="mf">6.60</span><span class="p">)]</span>
@@ -1152,9 +1152,8 @@ Y'= \neg X \wedge \neg Y
 <p>画子图时，可以直接简单地使用plt.subplot()方法。subplot传入三个参数，第一个参数表示子图的行数，第二个参数表示列数（可以想象为一个矩阵），第三个参数表示本张图在这个矩阵中的位置。</p>
 <h4 id="342">3.4.2极坐标图绘制实例</h4>
 <blockquote>
-<p>🍈已知曲线$  C_1:  $$\rho = \sin (3\theta )(0≤ \theta &lt; 2\pi ) $，曲线$ C_2:  $$\begin{cases}\theta = t + \frac{\pi }{6}
-\ \rho = \sin ^2(\frac{6t}{5}-\frac{\pi}{5}) -\cos ^3(6t)</p>
-<p>\end{cases} (-\pi \le t &lt; \pi)$。将两个曲线通过子图的方式绘制在两幅极坐标图上，并使这两幅图片左右排列。</p>
+<p>🍈已知曲线<span class="arithmatex">\(C_1: \rho = \sin (3\theta )(0≤ \theta &lt; 2\pi )\)</span>，曲线 <span class="arithmatex">\(C_2: \begin{cases}\theta = t + \frac{\pi }{6} ,
+\ \rho = \sin ^2(\frac{6t}{5}-\frac{\pi}{5}) -\cos ^3(6t) \end{cases} (-\pi \le t &lt; \pi)\)</span>。将两个曲线通过子图的方式绘制在两幅极坐标图上，并使这两幅图片左右排列。</p>
 </blockquote>
 <p><img alt="" src="../image/ploar1_FLogHOPOGF.jpg" /></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
