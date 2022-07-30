@@ -791,7 +791,7 @@
 </code></pre></div>
 <p>很不错！它输出了正确答案。但是从整个流程来看，似乎写Python代码、编译、引入、运行，这套流程显得略有些复杂。所以我们希望有一个更方便的办法。</p>
 <h4 id="cython_1">Cython的简单编译</h4>
-<p>现在，我们能像写“纯粹”的Python代码一样来工作了。在上一个实验中，我们曾经给出过一个时间复杂度位<span class="arithmatex">\(O(n^2)\)</span>的函数实现。现在，我们将函数原封不动地复制到fib.py中，然后打开交互式编程界面，输入</p>
+<p>现在，我们能像写“纯粹”的Python代码一样来工作了。在上一个实验中，我们曾经给出过一个时间复杂度为<span class="arithmatex">\(O(n^2)\)</span>的计算斐波那契数列的函数实现。现在，我们将函数原封不动地复制到fib.py中，然后打开交互式编程界面，输入</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">pyximport</span><span class="p">;</span> <span class="n">pyximport</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span> <span class="nn">fib</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
@@ -874,9 +874,9 @@
 <p>如果我们进行两次函数调用，我们会发现第二次函数调用的时间显著降低。这就对了，通过一次的编译，我们能为之后的函数调用提供更优的性能。</p>
 <h3 id="_7">实验内容</h3>
 <p>编写一个方阵乘法函数，函数原型为</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lenth</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
 </code></pre></div>
-<p>其中x和y是两个不同的方阵，数据类型为numpy.ndarray；lenth是一个整数，表示方阵的大小；函数的返回值为一个方阵。</p>
+<p>其中x和y是两个不同的方阵，数据类型为numpy.ndarray；length是一个整数，表示方阵的大小，对于一个<span class="arithmatex">\(n\times n\)</span>的方阵，<code>length = n</code>；函数的返回值为一个方阵。</p>
 <ul>
 <li>
 <p>实现函数mul；</p>
@@ -885,7 +885,7 @@
 <p>尽可能准确地估计函数的编译时间；</p>
 </li>
 <li>
-<p>记录lenth = <span class="arithmatex">\(1.0\times10^2\)</span>，<span class="arithmatex">\(1.5 \times 10^2\)</span>，<span class="arithmatex">\(2.0×10^2\)</span>，<span class="arithmatex">\(2.5×10^2\)</span>时，不使用JIT编译的代码与使用JIT编译的代码在运行时间上的差异；</p>
+<p>记录length = <span class="arithmatex">\(1.0\times10^2\)</span>，<span class="arithmatex">\(1.5 \times 10^2\)</span>，<span class="arithmatex">\(2.0×10^2\)</span>，<span class="arithmatex">\(2.5×10^2\)</span>时，不使用JIT编译的代码与使用JIT编译的代码在运行时间上的差异；</p>
 </li>
 <li>
 <p>用Cython实现相同的函数，比较在上述数据规模下的时间差异；</p>
@@ -902,7 +902,7 @@
 <p>🍈<strong>拒绝内卷：</strong> 完成选做项目不会有额外分数。</p>
 </blockquote>
 <h3 id="_9">交流与讨论</h3>
-<p>1. 随着lenth的线性增大，运行的时间是线性增加的吗？如果不是，是哪些因素影响了运行时间的变化？</p>
+<p>1. 随着length的线性增大，运行的时间是线性增加的吗？如果不是，是哪些因素影响了运行时间的变化？</p>
 <p>2. 什么样的函数在使用了JIT编译后速度会有显著提升，而什么样的函数不一定是这样？</p>
 <p>3. 装饰器@vectorize还可以将一个函数向量化。了解向量化的原理，并尝试使用向量化方法加速函数。</p>
 
