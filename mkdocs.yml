@@ -5,7 +5,7 @@ theme:
 
 repo_url: https://github.com/abnerhexu/uc-1
 repo_name: abnerhexu/uc-1
-copyright: 沙河小分队，蜀ICP备2021028983号-2 (页面由Webhook自动生成)
+copyright: 沙河小分队 蜀ICP备2021028983号-2 页面由Webhook自动生成
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
