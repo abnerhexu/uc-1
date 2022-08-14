@@ -1,0 +1,43 @@
+site_name: C++程序设计 2022年秋
+theme:
+  name: material
+  language: zh
+
+repo_url: https://github.com/abnerhexu/uc-1
+repo_name: abnerhexu/uc-1
+copyright: 沙河小分队 蜀ICP备2021028983号-2
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - footnotes
+  - def_list
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+nav:
+  - week1 - 从Python到C++: 'index.md'
+  - 关于课程:
+    - 本书编写人员: 'team.md'
+    - 关于试用版本: 'about.md'

@@ -1,0 +1,672 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>C++程序设计 2022年秋</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pythonc" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="." title="C++程序设计 2022年秋" class="md-header__button md-logo" aria-label="C++程序设计 2022年秋" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            C++程序设计 2022年秋
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              week1 - 从Python到C++
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/abnerhexu/uc-1" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    abnerhexu/uc-1
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="C++程序设计 2022年秋" class="md-nav__button md-logo" aria-label="C++程序设计 2022年秋" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    C++程序设计 2022年秋
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/abnerhexu/uc-1" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    abnerhexu/uc-1
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          week1 - 从Python到C++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        week1 - 从Python到C++
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    关于两门课程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    关于两门语言
+  </a>
+  
+    <nav class="md-nav" aria-label="关于两门语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    学习C++的原因
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C++程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_2" class="md-nav__link">
+    C++的历史
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythonc_1" class="md-nav__link">
+    从Python迁移到C++
+  </a>
+  
+    <nav class="md-nav" aria-label="从Python迁移到C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据类型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          关于课程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="关于课程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          关于课程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="team/" class="md-nav__link">
+        本书编写人员
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/" class="md-nav__link">
+        关于试用版本
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    关于两门课程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    关于两门语言
+  </a>
+  
+    <nav class="md-nav" aria-label="关于两门语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    学习C++的原因
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C++程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_2" class="md-nav__link">
+    C++的历史
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythonc_1" class="md-nav__link">
+    从Python迁移到C++
+  </a>
+  
+    <nav class="md-nav" aria-label="从Python迁移到C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据类型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/abnerhexu/uc-1/edit/master/docs/index.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="pythonc">从Python到C++<a class="headerlink" href="#pythonc" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">阅读提示</p>
+<p><strong>这是第一周的课外阅读材料。不阅读它也没有关系，不会影响主线学习进程。</strong></p>
+</div>
+<h3 id="_1">关于两门课程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>在《大学计算机基础》中，你已经了解了最基本的关于计算机科学的部分内容，例如你了解了信息在计算机中是如何编码和表示的，在实现“TOY计算机”的过程中你从程序员视角观察了计算机的硬件和软件系统，你还简单了解了计算机网络的相关概念和数据库的使用，在上面的过程中，Python作为一门编程语言为你的学习带来了很大的方(tong)便(ku)，而这学期我们将通过《C++程序设计》来对这一门编程语言有进一步的了解，并且使用它完成一系列编程任务。</p>
+<p>在《大学计算机基础》中，我们关心的是 <strong>概念</strong> ，例如抽象、递归、状态机，而《C++程序设计》这门课上我们还要将视线深入到 <strong>代码</strong> ，通过对问题的建模，写出实用的、优雅的、可移植的代码（这有一点困难，我们的课程不会涉及太多）。</p>
+<h3 id="_2">关于两门语言<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="_3">应用<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>Python是一门很热门的语言(<del>相信大家都已经在微信朋友圈看过了无数Python的广告</del>)，在人工智能和计算科学领域非常火热；而C++在数据科学领域也有很广泛的应用，例如著名的机器学习库Pytorch和Tensorflow尽管提供了Python的API以便我们方便地调用，但是其后端依然是C++实现的。</p>
+<p>C++也更适合用于开发大型的软件，例如Chrome和Firefox这两个著名的浏览器，就主要是基于C++开发的；Windows等操作系统、Office办公软件等也是使用C++开发的；就连控制勇气号在火星上探索的程序中，也有C++的踪影。</p>
+<h4 id="c">学习C++的原因<a class="headerlink" href="#c" title="Permanent link">&para;</a></h4>
+<p>首先，作为计算机相关专业的学生，学习C++是十分必要和有用的。CUDA编程、计算机网络计算机视觉等课程会广泛使用这一语言；信息学竞赛(OI)中，多数选手也会使用C++作为编程语言。</p>
+<p>其次，相较于Python，C++程序运行更快。一方面是与两种语言的类型和代码执行的流程不同有关，另一方面也与Python解释器需要不断检查数据类型有关。如果你使用OJ测评具有相同时间和空间复杂度的Python和C++代码，你会发现C++代码的内存占用会更少、运行时间会更短。</p>
+<p>还有一点，C++是更低级(low level)的语言(注意！C++依然是一门高级语言，只是说，相对于Python而言，更接近硬件一些)，这意味着我们能够控制的事情更多。例如，Python中没有指针和指针变量的概念，而指针，正是C语言(也包括C++)的灵魂。在学习时，我们还应当关注在《大学计算机基础》中曾经介绍过的内容，例如二进制原码、反码、补码，内存地址等，这些内容将有助于你理解C++程序设计中的某些概念。</p>
+<h3 id="c_1">C++程序<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
+<p>让我们来剖析一个最简单的C++程序。就像把大象装进冰箱的问题一样，要写好一个C++程序，我们首先需要关心基本步骤。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello, world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>第一步，我们将iostream(Input and Output Streams, I/O Streams)这个标准库引入进来，就像大家熟知的在Python中我们通过<code>import numpy</code>来引入NumPy包一样。非常容易。</p>
+<p>第二步，我们定义了一个函数，叫main()函数。在大多数可以单独执行的C++程序中，程序都是从这个函数开始执行的[注1]。</p>
+<p>第三步，我们在main()函数中写上std::cout，代表我们调用这个标准库中的cout(读作C out)，表明我们开始输出某些内容，符号<code>&lt;&lt;</code>表示输出，然后双引号引出字符串，然后通过std::endl打印换行符。在C++中，每一条语句结束以后，需要使用英文状态下输入的分号来表示这一条语句的结束(引入头文件的时候不需要)。</p>
+<p>第四步，我们定义的main()函数前有一个int，代表我们的这个函数要返回一个整数。因此我们在最后return 0即可(通常返回非零代表程序异常退出。在线上测评系统(Online Judge, OJ)中，一般只接受return 0这种写法)。</p>
+<p>这就是最简单的C++程序。我们为什么要写<code>std::cout</code>，是因为我们在Python中已经见过类似的问题，就是我们定义的函数可能与引入的库的函数重名。在Python中，我们可以通过<code>import numpy as np</code>这种别名的方式来解决，在C++中，我们是通过标明其是标准库的类来实现。</p>
+<p>如果实在觉得难受，我们可以增加一条语句，这样我们只需要写<code>cout</code>和<code>endl</code>，而不需要前面的<code>std::</code>了。改写后的代码如下所示。在小型程序中这可能很方便，但对于大型程序，我们还是建议使用上面的写法。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这是我们添加的一条语句</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello, world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="c_2">C++的历史<a class="headerlink" href="#c_2" title="Permanent link">&para;</a></h3>
+<p>这也是一段C++代码。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stdio.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stdlib.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">asm</span><span class="p">(</span><span class="s">&quot;sub $0x20,%rsp</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;movabs $0x77202c6f6c6c6548,%rax</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;mov %rax,(%rsp)</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;movl $0x646c726f, 0x8(%rsp)</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;movw $0x21, 0xc(%rsp)</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;movb $0x0,0xd(%rsp)</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;leaq (%rsp),%rax</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;mov %rax,%rdi</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;call __Z6myputsPc</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;add $0x20, %rsp</span><span class="se">\n\t</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">EXIT_SUCCESS</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>事实上，应该说这是一段伪装成C++的汇编语言代码。汇编语言的优点在于，我们仅仅使用最简单的指令就能完成全部代码的编写(回想一下Python中各种包的各种用法，是不是觉得很头大，所以《大学计算》开卷考试也不是没有道理)，并且汇编语言 的执行比C++更快，最重要的是，我们能够控制每一步我们的程序都做了些什么操作，我们能完全地控制我们的程序。</p>
+<p>那为什么不直接使用汇编语言呢？答案应当也是很显然的，为了完成简单的任务，我们要写大量的语句，并且这些汇编语言非常难以理解；最后，在不同体系结构的机器上，我们的汇编语言通常可移植性非常差。</p>
+<p>为了解决这个问题，人们发明了C语言，也发明了编译器。我们只需要编写容易被我们理解的C语言代码，编译器就能帮我们自动地翻译为晦涩难懂的汇编语言。1972年，贝尔实验室的Dennis M.Ritchie发明了C语言，C语言非常成功，因为它非常简单；但同时因为它太简单了，没有对象(object)和类(class)，我们在使用C语言开发大型项目时就非常困难。</p>
+<p>1983年，Bjarne发明了C++，C++完全兼容C语言的语法和特性，并且C++引入了许多高级的特性，例如我们刚刚见到过的<code>&lt;&lt;</code>来帮助我们输出某些内容。从诞生到现在，C++的标准也在不断进步，目前最新的标准是C++20；考虑到历史的原因，在我们本课程的学习中，我们主要使用C89标准编写C语言代码，仅仅在数据读写中使用C++提供的面向对象方法。</p>
+<h3 id="pythonc_1">从Python迁移到C++<a class="headerlink" href="#pythonc_1" title="Permanent link">&para;</a></h3>
+<h4 id="_4">数据类型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>C++是一个强调数据类型的语言。在Python中，我们想定义一个变量太容易了，只需要写<code>a = 1</code>就能把1这个整数赋给变量<code>a</code>。</p>
+<p>在C++中，变量使用和赋值前需要先声明，即标示它的类型。例如，当我们要创建一个名为<code>a</code>的<code>int</code>类型的变量，我们需要这样写：</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>常见的类型如下表所示(以x86-64机器，gcc 9.3.0为例)。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>数据范围</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>-2147483648 ~2147483647</td>
+<td>int a = -1</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>0~4294967295</td>
+<td>unsigned int a = 1</td>
+</tr>
+<tr>
+<td>long long</td>
+<td>-9223372036854775808~9223372036854775807</td>
+<td>long long a = 100</td>
+</tr>
+<tr>
+<td>char</td>
+<td>-128~127</td>
+<td>char a = 'A'</td>
+</tr>
+<tr>
+<td>float</td>
+<td>暂不讨论</td>
+<td>float a = 1.0</td>
+</tr>
+<tr>
+<td>double</td>
+<td>暂不讨论</td>
+<td>double a = 2.0</td>
+</tr>
+</tbody>
+</table>
+<p>此外，一旦定义了某个变量的类型，我们就不能更改它的类型。例如，我们在定义了int型变量a后就不能再将一个字符串赋值给它。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 下列写法是错误的</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>[注1]: 以下内容不需要初学者深究，在之后的《计算机系统》、《操作系统》等课程中还会继续介绍。事实上main()函数的开始和结束并不代表着整个程序的开始和结束。要想知道一个程序究竟是从哪里开始运行的，我们可以通过gdb调试程序，事实上，上面这段打印出Hello, world!的代码在main()开始执行以前，首先<a href="http://ld-linux-x86-64.so" title="ld-linux-x86-64.so">ld-linux-x86-64.so</a> 加载了 libc。作为初学者，这些都不是我们该关心的内容。</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+      
+        
+        <a href="team/" class="md-footer__link md-footer__link--next" aria-label="下一页: 本书编写人员" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              本书编写人员
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      沙河小分队 蜀ICP备2021028983号-2
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
