@@ -38,6 +38,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
 nav:
   - week1 - 从Python到C++: 'index.md'
-  - 关于课程:
-    - 本书编写人员: 'team.md'
+  - week1 - 代码风格建议: 'style.md'
+  - 关于文档:
+    - 文档编写人员: 'team.md'
     - 关于试用版本: 'about.md'
